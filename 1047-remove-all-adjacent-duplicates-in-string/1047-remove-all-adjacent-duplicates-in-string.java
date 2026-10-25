@@ -5,13 +5,14 @@ class Solution {
             char ch=s.charAt(i);
             if(str.empty()){
                 str.push(ch);
+                continue;
             }
-            else if(str.peek()==ch){
+            if (str.peek()==ch){
                 str.pop();
+                continue;
             }
-            else{
+
             str.push(ch);
-            }
         }
         StringBuilder res=new StringBuilder();
         while(!str.empty()){
